@@ -1,0 +1,10 @@
+class Solution {
+    public int climbStairs(int n) {
+        int[] c = new int[n+1];
+        c[0] = 1;
+        c[1] = 1;
+        for (int i = 2; i < n+1; i++) c[i] = c[i-1] + c[i-2];
+
+        return c[n];
+    }
+}
